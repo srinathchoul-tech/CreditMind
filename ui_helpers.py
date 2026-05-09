@@ -20,7 +20,6 @@ def update_language() -> None:
 def update_theme_mode() -> None:
     st.session_state.theme_mode = st.session_state.theme_selector
 
-
 def get_loan_product(loan_id: str | None) -> dict | None:
     if not loan_id:
         return None
@@ -60,7 +59,7 @@ def render_preferences(label_visibility: str = "visible") -> None:
 
 
 def render_top_nav() -> None:
-    brand_col, language_col, theme_col = st.columns([5.0, 1.5, 1.5], vertical_alignment="top")
+    brand_col, language_col, theme_col = st.columns([5.0, 1.75, 1.75], vertical_alignment="top")
     with brand_col:
         st.markdown("<div class='topbar-brand'>CreditMind</div>", unsafe_allow_html=True)
     with language_col:
