@@ -27,6 +27,10 @@ def _inject_landing_css() -> None:
           #MainMenu {visibility: hidden;}
           footer {visibility: hidden;}
           header {visibility: hidden;}
+          /* Hide sidebar on landing page */
+          section[data-testid="stSidebar"],
+          [data-testid="collapsedControl"],
+          [data-testid="stSidebarCollapsedControl"] { display: none !important; }
           .main .block-container{
             max-width: 100%;
             padding-top: 0;
