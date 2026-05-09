@@ -338,6 +338,8 @@ def inject_theme_styles() -> None:
         }
         """
 
+    logged_out_css = ""
+
     st.markdown(
         f"""
         <style>
@@ -363,8 +365,6 @@ def inject_theme_styles() -> None:
 
         header[data-testid="stHeader"] {{
             background: transparent !important;
-            height: 0 !important;
-            min-height: 0 !important;
             border: none !important;
         }}
 
@@ -446,6 +446,7 @@ def inject_theme_styles() -> None:
         }}
 
         section[data-testid="stSidebar"][aria-expanded="true"] {{
+            width: 17.5rem !important;
             min-width: 17.5rem !important;
             max-width: 17.5rem !important;
         }}
@@ -650,6 +651,8 @@ def inject_theme_styles() -> None:
         .stCaption {{
             color: color-mix(in srgb, var(--muted) 86%, var(--text) 14%) !important;
         }}
+
+        {logged_out_css}
 
         {theme_specific_css}
         </style>
