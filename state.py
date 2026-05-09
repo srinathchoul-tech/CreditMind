@@ -1,6 +1,5 @@
 import streamlit as st
 
-
 def initialize_state() -> None:
     defaults = {
         "logged_in": False,
