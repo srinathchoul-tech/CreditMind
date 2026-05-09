@@ -443,18 +443,14 @@ def inject_theme_styles() -> None:
         [data-testid="stSidebar"] {{
             background: var(--sidebar);
             border-right: 1px solid var(--border);
+        }}
+
+        section[data-testid="stSidebar"][aria-expanded="true"] {{
             min-width: 17.5rem !important;
             max-width: 17.5rem !important;
         }}
 
-        section[data-testid="stSidebar"][aria-expanded="false"] {{
-            min-width: 17.5rem !important;
-            max-width: 17.5rem !important;
-            transform: translateX(0) !important;
-            margin-left: 0 !important;
-        }}
-
-        section[data-testid="stSidebar"][aria-expanded="false"] > div {{
+        section[data-testid="stSidebar"][aria-expanded="true"] > div {{
             width: 17.5rem !important;
         }}
 
