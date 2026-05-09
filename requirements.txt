@@ -1,0 +1,16 @@
+streamlit
+langchain
+wikipedia
+langchain-community
+langchain-openai
+langchain-anthropic
+python-dotenv
+pydantic
+firebase-admin
+pypdf
+pdfplumber
+pytesseract
+pdf2image
+Pillow
+python-docx
+openpyxl
