@@ -111,6 +111,19 @@ def render_login() -> None:
         st.session_state.auth_role = "company"
 
     st.markdown(f"<div class='portal-title'>{t('portal_title')}</div>", unsafe_allow_html=True)
+    
+    # Hide sidebar securely only on the auth page
+    st.markdown(
+        """
+        <style>
+          section[data-testid="stSidebar"],
+          [data-testid="collapsedControl"],
+          [data-testid="stSidebarCollapsedControl"] { display: none !important; }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
     st.markdown(f"<div class='section-title'>{t('login_title')}</div>", unsafe_allow_html=True)
     st.markdown(f"<div class='body-muted'>{t('login_help')}</div>", unsafe_allow_html=True)
 
